@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "@runitback/styles";
+
+@source "../../packages/react/src";
+
+.shiki {
+  margin: 0;
+  background-color: transparent !important;
+  font-family: monospace !important;
+  letter-spacing: 0.125em;
+}
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+}
+[data-theme="dark"] .shiki,
+[data-theme="dark"] .shiki span {
+  color: var(--shiki-dark);
+}

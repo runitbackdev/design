@@ -1,0 +1,16 @@
+{
+  "name": "@runitback/styles",
+  "version": "0.0.0",
+  "exports": {
+    ".": { "style": "./styles.css", "default": "./styles.css" },
+    "./theme.css": "./theme.css",
+    "./fonts.css": "./fonts.css",
+    "./tokens.css": "./tokens.css"
+  },
+  "style": "./styles.css",
+  "files": ["*.css"],
+  "dependencies": {
+    "@fontsource/ibm-plex-sans": "^5",
+    "@fontsource/ibm-plex-mono": "^5"
+  }
+}

@@ -1,0 +1,90 @@
+/* Platform-neutral token + Tailwind theme layer. Web and NativeWind both read
+   this; the web base layer lives in styles.css, not here. */
+@import "./tokens.css";
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-sub: var(--sub);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-ink: var(--accent-ink);
+  --color-soft: var(--soft);
+  --color-soft-border: var(--soft-border);
+  --color-link: var(--link);
+  --color-link-hover: var(--link-hover);
+  --color-link-soft: var(--link-soft);
+  --color-link-soft-border: var(--link-soft-border);
+  --color-focus-ring: var(--focus-ring);
+  --color-danger: var(--danger);
+  --color-danger-hover: var(--danger-hover);
+  --color-danger-ink: var(--danger-ink);
+  --color-danger-soft: var(--danger-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+  --color-scrim: var(--scrim);
+
+  --shadow-1: var(--shadow-1);
+  --shadow-2: var(--shadow-2);
+}
+
+@theme {
+  --font-*: initial;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+
+  --ease-base: var(--ease);
+
+  /* Type scale in rem so it scales with the user's root font size. Each step
+     carries its own leading/tracking/weight; sizes are the px spec ÷ 16. */
+  --text-*: initial;
+
+  --text-display: 2rem; /* 32 */
+  --text-display--line-height: 1.2;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 500;
+
+  --text-title: 1.3125rem; /* 21 */
+  --text-title--line-height: 1.2;
+  --text-title--letter-spacing: -0.02em;
+  --text-title--font-weight: 500;
+
+  --text-subhead: 0.8125rem; /* 13 */
+  --text-subhead--line-height: 1.3;
+  --text-subhead--font-weight: 600;
+
+  --text-body: 0.875rem; /* 14 */
+  --text-body--line-height: 1.6;
+
+  --text-small: 0.78125rem; /* 12.5 */
+  --text-small--line-height: 1.5;
+
+  --text-data: 0.75rem; /* 12 */
+  --text-data--line-height: 1.4;
+
+  --text-caption: 0.65625rem; /* 10.5 */
+  --text-caption--line-height: 1.4;
+
+  --text-overline: 0.625rem; /* 10 */
+  --text-overline--line-height: 1.2;
+  --text-overline--letter-spacing: 0.14em;
+  --text-overline--font-weight: 500;
+
+  /* control sizes: buttons/inputs/etc. — not part of the reading scale */
+  --text-control: 0.6875rem; /* 11 */
+  --text-control--line-height: 1.2;
+  --text-control--letter-spacing: 0.07em;
+  --text-control--font-weight: 600;
+
+  --text-control-sm: 0.625rem; /* 10 */
+  --text-control-sm--line-height: 1.2;
+  --text-control-sm--letter-spacing: 0.07em;
+  --text-control-sm--font-weight: 600;
+}

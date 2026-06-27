@@ -1,0 +1,22 @@
+/* Default web entry. App side: @import "tailwindcss"; then @import "@runitback/styles". */
+@import "./theme.css";
+@import "./fonts.css";
+
+@utility duration-fast { transition-duration: var(--dur-fast); }
+@utility duration-base { transition-duration: var(--dur-base); }
+
+@layer base {
+  :root { color-scheme: light; }
+  [data-theme="dark"] { color-scheme: dark; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--soft); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+  ::placeholder { color: var(--faint); }
+}

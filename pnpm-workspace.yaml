@@ -1,0 +1,10 @@
+packages:
+  - "packages/*"
+  - "playground"
+  - "docs"
+
+# Exempt these trusted, just-published publishers from the global minimumReleaseAge cooldown.
+minimumReleaseAgeExclude:
+  - "@base-ui/*"
+  - "@typescript/*"
+  - "typescript"
