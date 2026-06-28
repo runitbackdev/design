@@ -4,11 +4,12 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { shikiHighlight } from "./shiki-plugin";
 
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/design/" : "/",
   plugins: [react(), tailwindcss(), shikiHighlight()],
   resolve: {
     alias: {
       "@runitback/react": resolve(import.meta.dirname, "../packages/react/src/index.ts"),
     },
   },
-});
+}));
