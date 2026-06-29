@@ -1,6 +1,7 @@
 import { Tooltip as BaseTooltip } from "@base-ui/react/tooltip";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
+import { popupMotion } from "./surfaceClasses";
 
 function Positioner({
   className,
@@ -16,7 +17,8 @@ function Popup({ className, ...props }: ComponentProps<typeof BaseTooltip.Popup>
   return (
     <BaseTooltip.Popup
       className={cn(
-        "origin-(--transform-origin) rounded-md bg-ink px-2 py-1 font-mono text-caption text-bg shadow-2 transition duration-fast ease-base data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
+        popupMotion,
+        "rounded-md bg-ink px-2 py-1 font-mono text-caption text-bg shadow-2",
         className,
       )}
       {...props}

@@ -19,7 +19,7 @@ function Scrollbar({ className, ...props }: ComponentProps<typeof BaseScrollArea
   return (
     <BaseScrollArea.Scrollbar
       className={cn(
-        "flex touch-none p-0.5 opacity-0 transition-opacity delay-300 select-none data-hovering:opacity-100 data-hovering:delay-0 data-scrolling:opacity-100 data-scrolling:delay-0 data-[orientation=horizontal]:h-2 data-[orientation=horizontal]:flex-col data-[orientation=vertical]:w-2",
+        "flex touch-none p-0.5 opacity-0 transition-opacity delay-300 select-none data-hovering:opacity-100 data-hovering:delay-0 data-scrolling:opacity-100 data-scrolling:delay-0 data-[orientation=horizontal]:h-2.5 data-[orientation=horizontal]:flex-col data-[orientation=vertical]:w-2.5",
         className,
       )}
       {...props}

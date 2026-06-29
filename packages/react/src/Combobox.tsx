@@ -3,7 +3,7 @@ import { Check, ChevronDown, X } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
 import { comboEmpty, comboInput, comboItem, comboList, comboPopup } from "./comboClasses";
-import { menuGroupLabel, menuSeparator } from "./menuClasses";
+import { popupGroupLabel, popupSeparator } from "./surfaceClasses";
 
 function Input({ className, ...props }: ComponentProps<typeof BaseCombobox.Input>) {
   return <BaseCombobox.Input className={cn(comboInput, className)} {...props} />;
@@ -24,7 +24,8 @@ function Icon({ className, children, ...props }: ComponentProps<typeof BaseCombo
 function Clear({ className, children, ...props }: ComponentProps<typeof BaseCombobox.Clear>) {
   return (
     <BaseCombobox.Clear
-      className={cn("cursor-pointer text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
+      aria-label="Clear"
+      className={cn("-m-1.5 cursor-pointer rounded-md p-1.5 text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
       {...props}
     >
       {children ?? <X className="size-3.5" />}
@@ -67,11 +68,11 @@ function Empty({ className, ...props }: ComponentProps<typeof BaseCombobox.Empty
 }
 
 function GroupLabel({ className, ...props }: ComponentProps<typeof BaseCombobox.GroupLabel>) {
-  return <BaseCombobox.GroupLabel className={cn(menuGroupLabel, className)} {...props} />;
+  return <BaseCombobox.GroupLabel className={cn(popupGroupLabel, className)} {...props} />;
 }
 
 function Separator({ className, ...props }: ComponentProps<typeof BaseCombobox.Separator>) {
-  return <BaseCombobox.Separator className={cn(menuSeparator, className)} {...props} />;
+  return <BaseCombobox.Separator className={cn(popupSeparator, className)} {...props} />;
 }
 
 function Status({ className, ...props }: ComponentProps<typeof BaseCombobox.Status>) {
@@ -97,7 +98,8 @@ function Chip({ className, ...props }: ComponentProps<typeof BaseCombobox.Chip>)
 function ChipRemove({ className, children, ...props }: ComponentProps<typeof BaseCombobox.ChipRemove>) {
   return (
     <BaseCombobox.ChipRemove
-      className={cn("cursor-pointer text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
+      aria-label="Remove"
+      className={cn("-m-1.5 cursor-pointer rounded-md p-1.5 text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
       {...props}
     >
       {children ?? <X className="size-3" />}

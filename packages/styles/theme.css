@@ -47,44 +47,43 @@
   --text-*: initial;
 
   --text-display: 2rem; /* 32 */
-  --text-display--line-height: 1.2;
-  --text-display--letter-spacing: -0.02em;
-  --text-display--font-weight: 500;
+  --text-display--line-height: 1.25;
+  --text-display--letter-spacing: -0.04em;
+  --text-display--font-weight: 600;
 
-  --text-title: 1.3125rem; /* 21 */
-  --text-title--line-height: 1.2;
+  --text-title: 1.25rem; /* 20 */
+  --text-title--line-height: 1.3;
   --text-title--letter-spacing: -0.02em;
-  --text-title--font-weight: 500;
+  --text-title--font-weight: 600;
 
-  --text-subhead: 0.8125rem; /* 13 */
-  --text-subhead--line-height: 1.3;
+  --text-subhead: 1rem; /* 16 */
+  --text-subhead--line-height: 1.5;
+  --text-subhead--letter-spacing: -0.02em;
   --text-subhead--font-weight: 600;
 
   --text-body: 0.875rem; /* 14 */
-  --text-body--line-height: 1.6;
+  --text-body--line-height: 1.43;
 
-  --text-small: 0.78125rem; /* 12.5 */
-  --text-small--line-height: 1.5;
+  --text-small: 0.8125rem; /* 13 */
+  --text-small--line-height: 1.4;
 
   --text-data: 0.75rem; /* 12 */
-  --text-data--line-height: 1.4;
+  --text-data--line-height: 1.33;
 
-  --text-caption: 0.65625rem; /* 10.5 */
-  --text-caption--line-height: 1.4;
+  --text-caption: 0.75rem; /* 12 */
+  --text-caption--line-height: 1.33;
 
-  --text-overline: 0.625rem; /* 10 */
-  --text-overline--line-height: 1.2;
+  --text-overline: 0.75rem; /* 12 */
+  --text-overline--line-height: 1.33;
   --text-overline--letter-spacing: 0.14em;
   --text-overline--font-weight: 500;
 
-  /* control sizes: buttons/inputs/etc. — not part of the reading scale */
-  --text-control: 0.6875rem; /* 11 */
-  --text-control--line-height: 1.2;
-  --text-control--letter-spacing: 0.07em;
-  --text-control--font-weight: 600;
+  /* control sizes: buttons/etc. — not part of the reading scale */
+  --text-control: 0.875rem; /* 14 */
+  --text-control--line-height: 1.43;
+  --text-control--font-weight: 500;
 
-  --text-control-sm: 0.625rem; /* 10 */
-  --text-control-sm--line-height: 1.2;
-  --text-control-sm--letter-spacing: 0.07em;
-  --text-control-sm--font-weight: 600;
+  --text-control-sm: 0.75rem; /* 12 */
+  --text-control-sm--line-height: 1.33;
+  --text-control-sm--font-weight: 500;
 }

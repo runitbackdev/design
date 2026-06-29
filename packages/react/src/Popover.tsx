@@ -1,6 +1,8 @@
 import { Popover as BasePopover } from "@base-ui/react/popover";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
+import { SurfaceArrowSvg, surfaceArrowNudge } from "./Arrow";
+import { popupMotion, popupSurface } from "./surfaceClasses";
 
 function Positioner({
   className,
@@ -16,7 +18,9 @@ function Popup({ className, ...props }: ComponentProps<typeof BasePopover.Popup>
   return (
     <BasePopover.Popup
       className={cn(
-        "max-w-xs origin-(--transform-origin) rounded-lg border border-line bg-surface p-3 text-ink shadow-2 transition duration-fast ease-base data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
+        popupSurface,
+        popupMotion,
+        "max-w-xs p-3 text-ink",
         className,
       )}
       {...props}
@@ -44,17 +48,8 @@ function Description({ className, ...props }: ComponentProps<typeof BasePopover.
 
 function Arrow({ className, ...props }: ComponentProps<typeof BasePopover.Arrow>) {
   return (
-    <BasePopover.Arrow
-      className={cn(
-        "data-[side=bottom]:-top-1.75 data-[side=top]:-bottom-1.75 data-[side=top]:rotate-180",
-        className,
-      )}
-      {...props}
-    >
-      <svg width="14" height="7" viewBox="0 0 14 7" className="fill-surface">
-        <path d="M0 7 L7 0 L14 7" className="stroke-line" strokeWidth="1" fill="none" />
-        <path d="M0 7 L7 0 L14 7" />
-      </svg>
+    <BasePopover.Arrow className={cn(surfaceArrowNudge, className)} {...props}>
+      <SurfaceArrowSvg />
     </BasePopover.Arrow>
   );
 }

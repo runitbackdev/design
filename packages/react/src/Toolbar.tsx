@@ -1,14 +1,15 @@
 import { Toolbar as BaseToolbar } from "@base-ui/react/toolbar";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
+import { barContainer } from "./surfaceClasses";
 
 const toolbarItem =
-  "inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-md px-2 py-1.5 font-mono text-small text-sub transition-colors duration-fast ease-base hover:bg-soft hover:text-ink data-pressed:bg-soft data-pressed:text-ink data-disabled:cursor-default data-disabled:opacity-45";
+  "inline-flex cursor-pointer items-center justify-center gap-1.5 rounded-md px-2 py-1.5 font-mono text-small text-sub transition-colors duration-fast ease-base hover:bg-soft hover:text-ink data-pressed:bg-soft data-pressed:text-ink data-disabled:cursor-not-allowed data-disabled:opacity-45";
 
 function Root({ className, ...props }: ComponentProps<typeof BaseToolbar.Root>) {
   return (
     <BaseToolbar.Root
-      className={cn("flex items-center gap-1 rounded-lg border border-line bg-surface p-1", className)}
+      className={cn(barContainer, className)}
       {...props}
     />
   );
@@ -30,7 +31,7 @@ function Input({ className, ...props }: ComponentProps<typeof BaseToolbar.Input>
   return (
     <BaseToolbar.Input
       className={cn(
-        "rounded-md border border-line bg-surface px-2 py-1 font-mono text-small text-ink outline-none focus:border-link focus:ring-2 focus:ring-focus-ring",
+        "rounded-md border border-soft-border bg-surface px-2 py-1 font-mono text-small text-ink outline-none focus:border-link focus:ring-2 focus:ring-focus-ring",
         className,
       )}
       {...props}

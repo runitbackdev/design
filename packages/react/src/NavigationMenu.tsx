@@ -2,6 +2,7 @@ import { NavigationMenu as BaseNavigationMenu } from "@base-ui/react/navigation-
 import { ChevronDown } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
+import { popupSurface } from "./surfaceClasses";
 
 function Root({ className, ...props }: ComponentProps<typeof BaseNavigationMenu.Root>) {
   return <BaseNavigationMenu.Root className={cn("relative", className)} {...props} />;
@@ -55,7 +56,8 @@ function Popup({ className, ...props }: ComponentProps<typeof BaseNavigationMenu
   return (
     <BaseNavigationMenu.Popup
       className={cn(
-        "h-(--popup-height) w-(--popup-width) origin-(--transform-origin) overflow-hidden rounded-lg border border-line bg-surface shadow-2 transition-[transform,opacity,width,height] duration-base ease-base data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
+        popupSurface,
+        "h-(--popup-height) w-(--popup-width) origin-(--transform-origin) overflow-hidden transition-[transform,opacity,width,height] duration-base ease-base data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
         className,
       )}
       {...props}

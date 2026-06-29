@@ -2,7 +2,8 @@ import { Menu as BaseMenu } from "@base-ui/react/menu";
 import { Check, ChevronRight } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
-import { menuGroupLabel, menuItem, menuPopup, menuSeparator } from "./menuClasses";
+import { menuItem, menuPopup } from "./menuClasses";
+import { popupGroupLabel, popupSeparator } from "./surfaceClasses";
 
 function Positioner({
   className,
@@ -23,11 +24,11 @@ function Item({ className, ...props }: ComponentProps<typeof BaseMenu.Item>) {
 }
 
 function Separator({ className, ...props }: ComponentProps<typeof BaseMenu.Separator>) {
-  return <BaseMenu.Separator className={cn(menuSeparator, className)} {...props} />;
+  return <BaseMenu.Separator className={cn(popupSeparator, className)} {...props} />;
 }
 
 function GroupLabel({ className, ...props }: ComponentProps<typeof BaseMenu.GroupLabel>) {
-  return <BaseMenu.GroupLabel className={cn(menuGroupLabel, className)} {...props} />;
+  return <BaseMenu.GroupLabel className={cn(popupGroupLabel, className)} {...props} />;
 }
 
 function CheckboxItem({ className, ...props }: ComponentProps<typeof BaseMenu.CheckboxItem>) {

@@ -10,7 +10,7 @@ function Input({ className, ...props }: ComponentProps<typeof BaseOTPField.Input
   return (
     <BaseOTPField.Input
       className={cn(
-        "size-10 rounded-lg border border-line bg-surface text-center font-mono text-subhead text-ink caret-link outline-none transition-[border-color,box-shadow] duration-fast ease-base focus:border-link focus:ring-2 focus:ring-focus-ring data-disabled:opacity-45",
+        "size-10 rounded-lg border border-soft-border bg-surface text-center font-mono text-subhead text-ink caret-link outline-none transition-[border-color,box-shadow] duration-fast ease-base focus:border-link focus:ring-2 focus:ring-focus-ring data-invalid:border-danger data-invalid:focus:ring-danger data-disabled:opacity-45",
         className,
       )}
       {...props}

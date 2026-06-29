@@ -4,7 +4,7 @@ import { isValidElement, type ComponentProps } from "react";
 import { cn } from "./cn";
 
 const button = cva(
-  "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-lg font-mono uppercase select-none transition-[background-color,border-color,color] duration-fast ease-base disabled:cursor-default disabled:pointer-events-none disabled:opacity-45",
+  "inline-flex cursor-pointer items-center justify-center gap-2 whitespace-nowrap rounded-lg font-mono select-none transition-[background-color,border-color,color] duration-fast ease-base disabled:cursor-not-allowed disabled:opacity-45",
   {
     variants: {
       variant: {
@@ -27,9 +27,9 @@ export type ButtonProps = Omit<ComponentProps<typeof BaseButton>, "className"> &
   VariantProps<typeof button> & { className?: string };
 
 export function Button({ className, variant, size, render, nativeButton, ...props }: ButtonProps) {
-  // When rendered polymorphically as a non-button (e.g. an <a>), tell Base UI so
-  // it restores the right role/keyboard semantics instead of warning.
-  const isNative = nativeButton ?? (isValidElement(render) ? render.type === "button" : true);
+  // Derive Base UI's nativeButton from an element render (e.g. <a/> → false) so it
+  // restores the right semantics; a function render is opaque, so defer to Base UI.
+  const isNative = nativeButton ?? (isValidElement(render) ? render.type === "button" : undefined);
   return (
     <BaseButton
       render={render}

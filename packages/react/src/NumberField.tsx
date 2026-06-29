@@ -4,7 +4,7 @@ import type { ComponentProps } from "react";
 import { cn } from "./cn";
 
 const stepButton =
-  "flex size-8 shrink-0 cursor-pointer items-center justify-center text-sub transition-colors duration-fast ease-base hover:bg-soft hover:text-ink disabled:cursor-default disabled:opacity-45 data-disabled:cursor-default data-disabled:opacity-45";
+  "flex size-8 shrink-0 cursor-pointer items-center justify-center text-sub transition-colors duration-fast ease-base hover:bg-soft hover:text-ink disabled:cursor-not-allowed disabled:opacity-45 data-disabled:cursor-not-allowed data-disabled:opacity-45";
 
 function Root({ className, ...props }: ComponentProps<typeof BaseNumberField.Root>) {
   return <BaseNumberField.Root className={cn("flex flex-col gap-1.5", className)} {...props} />;
@@ -14,7 +14,7 @@ function Group({ className, ...props }: ComponentProps<typeof BaseNumberField.Gr
   return (
     <BaseNumberField.Group
       className={cn(
-        "inline-flex items-center overflow-hidden rounded-lg border border-line bg-surface focus-within:border-link focus-within:ring-2 focus-within:ring-focus-ring",
+        "inline-flex items-center overflow-hidden rounded-lg border border-soft-border bg-surface focus-within:border-link focus-within:ring-2 focus-within:ring-focus-ring",
         className,
       )}
       {...props}
@@ -24,7 +24,7 @@ function Group({ className, ...props }: ComponentProps<typeof BaseNumberField.Gr
 
 function Decrement({ className, children, ...props }: ComponentProps<typeof BaseNumberField.Decrement>) {
   return (
-    <BaseNumberField.Decrement className={cn(stepButton, className)} {...props}>
+    <BaseNumberField.Decrement aria-label="Decrease" className={cn(stepButton, className)} {...props}>
       {children ?? <Minus className="size-3.5" />}
     </BaseNumberField.Decrement>
   );
@@ -32,7 +32,7 @@ function Decrement({ className, children, ...props }: ComponentProps<typeof Base
 
 function Increment({ className, children, ...props }: ComponentProps<typeof BaseNumberField.Increment>) {
   return (
-    <BaseNumberField.Increment className={cn(stepButton, className)} {...props}>
+    <BaseNumberField.Increment aria-label="Increase" className={cn(stepButton, className)} {...props}>
       {children ?? <Plus className="size-3.5" />}
     </BaseNumberField.Increment>
   );

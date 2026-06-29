@@ -6,7 +6,7 @@ function Root({ className, ...props }: ComponentProps<typeof BaseSwitch.Root>) {
   return (
     <BaseSwitch.Root
       className={cn(
-        "relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-soft-border bg-soft p-0.5 transition-[background-color,border-color] duration-fast ease-base data-checked:border-accent data-checked:bg-accent data-disabled:cursor-default data-disabled:opacity-45",
+        "relative inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border border-soft-border bg-soft p-0.5 transition-[background-color,border-color] duration-fast ease-base before:absolute before:inset-x-0 before:-inset-y-1 before:content-[''] data-checked:border-accent data-checked:bg-accent data-disabled:cursor-not-allowed data-disabled:opacity-45",
         className,
       )}
       {...props}

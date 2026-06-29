@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 import { cn } from "./cn";
 
 const avatar = cva(
-  "inline-flex shrink-0 items-center justify-center rounded-full border border-soft-border bg-soft font-mono font-semibold text-ink",
+  "inline-flex shrink-0 items-center justify-center rounded-full border border-soft-border bg-soft font-mono font-semibold lowercase text-ink",
   {
     variants: {
       size: {
@@ -21,7 +21,7 @@ export type AvatarProps = Omit<ComponentProps<"span">, "children"> &
 export function Avatar({ className, size, initials, ...props }: AvatarProps) {
   return (
     <span className={cn(avatar({ size }), className)} {...props}>
-      {initials.toLowerCase()}
+      {initials}
     </span>
   );
 }

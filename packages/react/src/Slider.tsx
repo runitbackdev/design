@@ -40,7 +40,7 @@ function Thumb({ className, ...props }: ComponentProps<typeof BaseSlider.Thumb>)
   return (
     <BaseSlider.Thumb
       className={cn(
-        "size-4 rounded-full border border-soft-border bg-surface shadow-sm outline-none transition-[border-color,box-shadow] duration-fast ease-base data-dragging:border-accent data-focused:ring-2 data-focused:ring-focus-ring data-disabled:opacity-45",
+        "size-4 rounded-full border border-soft-border bg-surface shadow-sm outline-none transition-[border-color,box-shadow] duration-fast ease-base before:absolute before:-inset-2 before:content-[''] data-dragging:border-accent data-focused:ring-2 data-focused:ring-focus-ring data-disabled:opacity-45",
         className,
       )}
       {...props}

@@ -2,12 +2,13 @@ import { Select as BaseSelect } from "@base-ui/react/select";
 import { Check, ChevronDown } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
+import { popupMotion, popupSurface } from "./surfaceClasses";
 
 function Trigger({ className, ...props }: ComponentProps<typeof BaseSelect.Trigger>) {
   return (
     <BaseSelect.Trigger
       className={cn(
-        "flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg border border-line bg-surface px-3 py-2 font-mono text-small text-ink transition-[border-color,box-shadow] duration-fast ease-base focus-visible:border-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring data-disabled:cursor-default data-disabled:opacity-45",
+        "flex w-full cursor-pointer items-center justify-between gap-2 rounded-lg border border-soft-border bg-surface px-3 py-2 font-mono text-small text-ink transition-[border-color,box-shadow] duration-fast ease-base focus-visible:border-link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-focus-ring data-invalid:border-danger data-invalid:focus-visible:ring-danger data-disabled:cursor-not-allowed data-disabled:opacity-45",
         className,
       )}
       {...props}
@@ -37,7 +38,9 @@ function Popup({ className, ...props }: ComponentProps<typeof BaseSelect.Popup>)
   return (
     <BaseSelect.Popup
       className={cn(
-        "min-w-[var(--anchor-width)] rounded-lg border border-line bg-surface p-1 shadow-2 transition duration-fast ease-base data-starting-style:scale-95 data-starting-style:opacity-0 data-ending-style:scale-95 data-ending-style:opacity-0",
+        popupSurface,
+        popupMotion,
+        "min-w-(--anchor-width) p-1",
         className,
       )}
       {...props}
@@ -49,7 +52,7 @@ function Item({ className, ...props }: ComponentProps<typeof BaseSelect.Item>) {
   return (
     <BaseSelect.Item
       className={cn(
-        "flex cursor-pointer items-center gap-2 rounded-md py-1.5 pr-2 pl-2 font-mono text-small text-ink outline-none select-none data-disabled:cursor-default data-disabled:opacity-45 data-highlighted:bg-soft",
+        "flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 font-mono text-small text-ink outline-none select-none data-disabled:cursor-not-allowed data-disabled:opacity-45 data-highlighted:bg-soft data-highlighted:ring-1 data-highlighted:ring-inset data-highlighted:ring-soft-border",
         className,
       )}
       {...props}

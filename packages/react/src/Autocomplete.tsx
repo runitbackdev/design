@@ -3,7 +3,7 @@ import { ChevronDown, X } from "lucide-react";
 import type { ComponentProps } from "react";
 import { cn } from "./cn";
 import { comboEmpty, comboInput, comboItem, comboList, comboPopup } from "./comboClasses";
-import { menuGroupLabel, menuSeparator } from "./menuClasses";
+import { popupGroupLabel, popupSeparator } from "./surfaceClasses";
 
 function Input({ className, ...props }: ComponentProps<typeof BaseAutocomplete.Input>) {
   return <BaseAutocomplete.Input className={cn(comboInput, className)} {...props} />;
@@ -24,7 +24,8 @@ function Icon({ className, children, ...props }: ComponentProps<typeof BaseAutoc
 function Clear({ className, children, ...props }: ComponentProps<typeof BaseAutocomplete.Clear>) {
   return (
     <BaseAutocomplete.Clear
-      className={cn("cursor-pointer text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
+      aria-label="Clear"
+      className={cn("-m-1.5 cursor-pointer rounded-md p-1.5 text-faint transition-colors duration-fast ease-base hover:text-ink", className)}
       {...props}
     >
       {children ?? <X className="size-3.5" />}
@@ -59,11 +60,11 @@ function Empty({ className, ...props }: ComponentProps<typeof BaseAutocomplete.E
 }
 
 function GroupLabel({ className, ...props }: ComponentProps<typeof BaseAutocomplete.GroupLabel>) {
-  return <BaseAutocomplete.GroupLabel className={cn(menuGroupLabel, className)} {...props} />;
+  return <BaseAutocomplete.GroupLabel className={cn(popupGroupLabel, className)} {...props} />;
 }
 
 function Separator({ className, ...props }: ComponentProps<typeof BaseAutocomplete.Separator>) {
-  return <BaseAutocomplete.Separator className={cn(menuSeparator, className)} {...props} />;
+  return <BaseAutocomplete.Separator className={cn(popupSeparator, className)} {...props} />;
 }
 
 function Status({ className, ...props }: ComponentProps<typeof BaseAutocomplete.Status>) {
