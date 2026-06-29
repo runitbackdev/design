@@ -13,7 +13,6 @@ Each one stands alone and depends on `@runitback/styles`. No monorepo machinery 
   custom properties, the Tailwind v4 `@theme` layer, and the web base styles. One
   import. NativeWind reads its `theme.css` directly.
 - `@runitback/react` — the React components.
-- `@runitback/react-native` — the React Native components. not built yet.
 
 ## Using it
 
