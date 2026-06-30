@@ -16,12 +16,16 @@ const avatar = cva(
 );
 
 export type AvatarProps = Omit<ComponentProps<"span">, "children"> &
-  VariantProps<typeof avatar> & { initials: string };
+  VariantProps<typeof avatar> & {
+    initials: string;
+    src?: string | null;
+    alt?: string;
+  };
 
-export function Avatar({ className, size, initials, ...props }: AvatarProps) {
+export function Avatar({ className, size, initials, src, alt, ...props }: AvatarProps) {
   return (
-    <span className={cn(avatar({ size }), className)} {...props}>
-      {initials}
+    <span className={cn(avatar({ size }), "overflow-hidden", className)} {...props}>
+      {src ? <img src={src} alt={alt ?? initials} className="size-full object-cover" /> : initials}
     </span>
   );
 }
