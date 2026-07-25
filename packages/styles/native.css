@@ -1,0 +1,57 @@
+/* Native-only layer for @runitback/native consumers. Import after theme.css in
+   the app's global.css. Assumes fonts are loaded via @expo-google-fonts (RN
+   resolves loaded fonts by exact registered name; one family per weight). */
+
+@theme {
+  --font-sans: initial;
+  --font-mono: initial;
+  --font-sans-medium: "IBMPlexSans_500Medium";
+  --font-sans-semibold: "IBMPlexSans_600SemiBold";
+  --font-mono-medium: "IBMPlexMono_500Medium";
+  --font-mono-semibold: "IBMPlexMono_600SemiBold";
+}
+
+/* Override the theme utilities outright: theme.css's font stacks layer into the
+   runtime var registry as arrays, and Android TextInput hard-crashes if the
+   resolver hands it the array. Literal values compile inlined instead. */
+@utility font-sans {
+  font-family: "IBMPlexSans_400Regular";
+}
+@utility font-mono {
+  font-family: "IBMPlexMono_400Regular";
+}
+
+/* Web gets these from styles.css; native imports theme.css only. */
+@utility duration-fast {
+  transition-duration: var(--dur-fast);
+}
+@utility duration-base {
+  transition-duration: var(--dur-base);
+}
+
+/* Mount animations — web uses data-starting-style transitions, which have no
+   native analog; these fire when overlay content mounts. */
+@keyframes rb-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes rb-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@utility fade-in {
+  animation: rb-fade-in var(--dur-fast) var(--ease);
+}
+@utility pop-in {
+  animation: rb-pop-in var(--dur-fast) var(--ease);
+}

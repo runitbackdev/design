@@ -3,8 +3,29 @@ packages:
   - "playground"
   - "docs"
 
+# Single-version invariants. react-native/react-native-svg/@types/react/typescript
+# must match between playground and packages/native or pnpm splits react-native
+# into two store instances (two copies in the Metro bundle).
+catalog:
+  "@types/react": ~19.2.2
+  react-native: 0.86.0
+  react-native-svg: 15.15.4
+  typescript: 7.0.2
+
+# NativeWind v5 preview requires this exact lightningcss (newer ones break its CSS compiler).
+# worklets JS must exactly match the native build frozen into Expo Go (0.10.0) —
+# 0.10.2 changed the JS↔native serialization layout and SIGSEGVs on any CSS transition.
+overrides:
+  lightningcss: 1.30.1
+  react-native-worklets: 0.10.0
+
 # Exempt these trusted, just-published publishers from the global minimumReleaseAge cooldown.
 minimumReleaseAgeExclude:
   - "@base-ui/*"
   - "@typescript/*"
   - "typescript"
+  - expo-updates@57.0.10
+
+# Vendored tarball is prebuilt (dist/ included) — no scripts needed.
+allowBuilds:
+  react-native-css: false

@@ -1,0 +1,28 @@
+// Generated from @runitback/styles/tokens.css — do not edit.
+// Regenerate: pnpm --filter @runitback/native generate:themes
+export const darkVars = {
+  accent: "#FFFFFF",
+  "link-hover": "#C0CDFF",
+  "focus-ring": "#A4B6FF",
+  "danger-hover": "#E59A8F",
+  scrim: "rgba(0, 0, 0, 0.55)",
+  bg: "#161310",
+  surface: "#211D18",
+  sunken: "#1B1814",
+  ink: "#F2EDE5",
+  sub: "#A89E90",
+  faint: "#7A7268",
+  line: "#3C352C",
+  "accent-hover": "#E9E3DA",
+  "accent-ink": "#1F1B16",
+  soft: "#322C24",
+  "soft-border": "#7A7268",
+  link: "#A4B6FF",
+  "link-soft": "#272D45",
+  "link-soft-border": "#3C4666",
+  danger: "#D98377",
+  "danger-ink": "#2A1310",
+  "danger-soft": "#33211D",
+  warn: "#D2A94A",
+  "warn-soft": "#332B17",
+};
