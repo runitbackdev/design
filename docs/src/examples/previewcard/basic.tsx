@@ -1,4 +1,4 @@
-import { Avatar, PreviewCard, TextLink } from "@runitback/react";
+import { Avatar, PreviewCard, TextLink } from "@runitbk/react";
 
 export default function () {
   return (

@@ -1,4 +1,4 @@
-import { NumberField } from "@runitback/react";
+import { NumberField } from "@runitbk/react";
 
 export default function () {
   return (

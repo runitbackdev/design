@@ -1,4 +1,4 @@
-import { TextLink } from "@runitback/react";
+import { TextLink } from "@runitbk/react";
 
 export default function () {
   return (

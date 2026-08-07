@@ -1,4 +1,4 @@
-import { Avatar } from "@runitback/react";
+import { Avatar } from "@runitbk/react";
 
 export default function () {
   return (

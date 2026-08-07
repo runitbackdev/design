@@ -9,7 +9,7 @@ export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss(), shikiHighlight()],
   resolve: {
     alias: {
-      "@runitback/react": resolve(import.meta.dirname, "../packages/react/src/index.ts"),
+      "@runitbk/react": resolve(import.meta.dirname, "../packages/react/src/index.ts"),
     },
   },
 }));

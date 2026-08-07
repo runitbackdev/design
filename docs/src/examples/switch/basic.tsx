@@ -1,4 +1,4 @@
-import { Field, Switch } from "@runitback/react";
+import { Field, Switch } from "@runitbk/react";
 
 export default function () {
   return (

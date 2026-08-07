@@ -1,4 +1,4 @@
-import { Card } from "@runitback/react";
+import { Card } from "@runitbk/react";
 
 export default function () {
   return (

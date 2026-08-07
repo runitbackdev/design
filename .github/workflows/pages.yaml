@@ -29,7 +29,7 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
-      - run: pnpm --filter @runitback/docs build
+      - run: pnpm --filter @runitbk/docs build
 
       - uses: actions/upload-pages-artifact@v5
         with:

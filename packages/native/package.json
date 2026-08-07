@@ -1,5 +1,5 @@
 {
-  "name": "@runitback/native",
+  "name": "@runitbk/native",
   "version": "0.0.0",
   "type": "module",
   "main": "./src/index.ts",
@@ -15,7 +15,7 @@
     "generate:themes": "node scripts/generate-themes.mjs"
   },
   "peerDependencies": {
-    "@runitback/styles": "workspace:*",
+    "@runitbk/styles": "workspace:*",
     "react": "^19",
     "react-native": ">=0.81"
   },

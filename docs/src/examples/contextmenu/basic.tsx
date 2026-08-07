@@ -1,4 +1,4 @@
-import { ContextMenu } from "@runitback/react";
+import { ContextMenu } from "@runitbk/react";
 
 export default function () {
   return (

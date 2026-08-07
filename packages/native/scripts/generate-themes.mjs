@@ -42,8 +42,8 @@ const body = entries.map(([name, value]) => `  ${key(name)}: "${value}",`).join(
 
 writeFileSync(
   outPath,
-  `// Generated from @runitback/styles/tokens.css — do not edit.
-// Regenerate: pnpm --filter @runitback/native generate:themes
+  `// Generated from @runitbk/styles/tokens.css — do not edit.
+// Regenerate: pnpm --filter @runitbk/native generate:themes
 export const darkVars = {
 ${body}
 };

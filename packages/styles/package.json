@@ -1,5 +1,5 @@
 {
-  "name": "@runitback/styles",
+  "name": "@runitbk/styles",
   "version": "0.0.0",
   "exports": {
     ".": { "style": "./styles.css", "default": "./styles.css" },

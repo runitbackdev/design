@@ -1,6 +1,6 @@
 import { type ComponentType, useState } from "react";
 import { Check, Copy } from "lucide-react";
-import { Button, Card } from "@runitback/react";
+import { Button, Card } from "@runitbk/react";
 
 type Props = { of: ComponentType; source: string; html: string };
 

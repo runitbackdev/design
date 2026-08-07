@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxGroup, Fieldset } from "@runitback/react";
+import { Checkbox, CheckboxGroup, Fieldset } from "@runitbk/react";
 
 export default function () {
   return (

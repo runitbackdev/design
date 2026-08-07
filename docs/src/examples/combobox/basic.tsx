@@ -1,4 +1,4 @@
-import { Combobox } from "@runitback/react";
+import { Combobox } from "@runitbk/react";
 
 export default function () {
   return (

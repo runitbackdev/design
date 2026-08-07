@@ -1,4 +1,4 @@
-import { ScrollArea } from "@runitback/react";
+import { ScrollArea } from "@runitbk/react";
 
 export default function () {
   return (

@@ -1,5 +1,5 @@
 {
-  "name": "@runitback/react",
+  "name": "@runitbk/react",
   "version": "0.0.0",
   "type": "module",
   "exports": {
@@ -18,7 +18,7 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "@runitback/styles": "workspace:*",
+    "@runitbk/styles": "workspace:*",
     "react": "^19",
     "react-dom": "^19"
   },

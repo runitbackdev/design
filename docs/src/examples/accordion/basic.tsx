@@ -1,4 +1,4 @@
-import { Accordion } from "@runitback/react";
+import { Accordion } from "@runitbk/react";
 
 export default function () {
   return (

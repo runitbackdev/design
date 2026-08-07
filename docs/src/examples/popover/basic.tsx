@@ -1,4 +1,4 @@
-import { Button, Popover } from "@runitback/react";
+import { Button, Popover } from "@runitbk/react";
 
 export default function () {
   return (

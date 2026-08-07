@@ -1,4 +1,4 @@
-import { Menu, Menubar } from "@runitback/react";
+import { Menu, Menubar } from "@runitbk/react";
 
 export default function () {
   return (

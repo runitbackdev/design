@@ -1,4 +1,4 @@
-import { Progress } from "@runitback/react";
+import { Progress } from "@runitbk/react";
 
 export default function () {
   return (

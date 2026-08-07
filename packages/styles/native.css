@@ -1,4 +1,4 @@
-/* Native-only layer for @runitback/native consumers. Import after theme.css in
+/* Native-only layer for @runitbk/native consumers. Import after theme.css in
    the app's global.css. Assumes fonts are loaded via @expo-google-fonts (RN
    resolves loaded fonts by exact registered name; one family per weight). */
 
