@@ -22,11 +22,13 @@ jobs:
 
       - uses: pnpm/action-setup@v6
 
+      # No registry-url here on purpose. It sets NPM_CONFIG_USERCONFIG to a
+      # temp .npmrc holding a literal ${NODE_AUTH_TOKEN}, and that file takes
+      # precedence over the ~/.npmrc the changesets action writes.
       - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
-          registry-url: https://registry.npmjs.org
 
       - run: pnpm install --frozen-lockfile
 
@@ -44,4 +46,4 @@ jobs:
           title: "chore: version packages"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
