@@ -1,6 +1,6 @@
 {
   "name": "@runitbk/styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Design tokens, theme, and base CSS for the RunItBack design system.",
   "license": "MIT",
   "homepage": "https://runitbackdev.github.io/design/",
@@ -13,14 +13,19 @@
     "access": "public"
   },
   "exports": {
-    ".": { "style": "./styles.css", "default": "./styles.css" },
+    ".": {
+      "style": "./styles.css",
+      "default": "./styles.css"
+    },
     "./theme.css": "./theme.css",
     "./fonts.css": "./fonts.css",
     "./tokens.css": "./tokens.css",
     "./native.css": "./native.css"
   },
   "style": "./styles.css",
-  "files": ["*.css"],
+  "files": [
+    "*.css"
+  ],
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5",
     "@fontsource/ibm-plex-mono": "^5"

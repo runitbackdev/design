@@ -1,6 +1,6 @@
 {
   "name": "@runitbk/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React components for the RunItBack design system, built on Base UI.",
   "license": "MIT",
   "homepage": "https://runitbackdev.github.io/design/",
