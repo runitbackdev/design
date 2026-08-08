@@ -1,6 +1,6 @@
 {
   "name": "@runitbk/native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native components for the RunItBack design system, built on rn-primitives and NativeWind.",
   "license": "MIT",
   "homepage": "https://runitbackdev.github.io/design/",
