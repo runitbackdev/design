@@ -1,5 +1,5 @@
 import { Command } from "lucide-react";
-import { Kbd } from "@runitback/react";
+import { Kbd } from "@runitbk/react";
 
 export default function () {
   return (

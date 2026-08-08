@@ -1,6 +1,6 @@
-# @runitback/native
+# @runitbk/native
 
-The React Native components. Same tokens, same design language as `@runitback/react`;
+The React Native components. Same tokens, same design language as `@runitbk/react`;
 NativeWind v5 does the styling, [rn-primitives](https://rn-primitives.vercel.app)
 supplies behavior where RN core has none.
 
@@ -26,10 +26,10 @@ overflow), so don't add them here, and don't add them to the workspace root.
        @import "tailwindcss/preflight.css" layer(base);
        @import "tailwindcss/utilities.css";
        @import "nativewind/theme";
-       @import "@runitback/styles/theme.css";
-       @import "@runitback/styles/native.css";
+       @import "@runitbk/styles/theme.css";
+       @import "@runitbk/styles/native.css";
 
-       @source "../node_modules/@runitback/native/src"; /* adjust to where it resolves */
+       @source "../node_modules/@runitbk/native/src"; /* adjust to where it resolves */
 
        :root { font-size: 16px; } /* rem base; the compiler defaults to 14 */
 
@@ -70,15 +70,15 @@ overflow), so don't add them here, and don't add them to the workspace root.
 - Checkbox has no indeterminate state (rn-primitives limitation).
 - Field has no validation context — wire `invalid` and `Field.Error` yourself.
 - Dark-mode shadows keep their light values (variable provider is colors-only so far).
-- react-native-web is untested and unthemed; web apps use `@runitback/react`.
+- react-native-web is untested and unthemed; web apps use `@runitbk/react`.
 
 ## Contributing
 
 - `src/themes.ts` is generated — after changing the dark block in
-  `@runitback/styles/tokens.css`, run `pnpm --filter @runitback/native generate:themes`.
+  `@runitbk/styles/tokens.css`, run `pnpm --filter @runitbk/native generate:themes`.
 - Shared internals live in `src/shared.tsx` (`PlainChildren`, `clamp`, `useThemeColor`,
   `wrapLabel`, menu icons); shared class strings in `menuClasses.ts` and
   `surfaceClasses.ts`. Add to those rather than redeclaring per component.
-- Verify with both type programs: `pnpm --filter @runitback/native typecheck` and
+- Verify with both type programs: `pnpm --filter @runitbk/native typecheck` and
   `npx tsc --noEmit` from `playground/` — they resolve types differently and both
   must pass.

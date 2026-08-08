@@ -1,4 +1,4 @@
-/* Default web entry. App side: @import "tailwindcss"; then @import "@runitback/styles". */
+/* Default web entry. App side: @import "tailwindcss"; then @import "@runitbk/styles". */
 @import "./theme.css";
 @import "./fonts.css";
 

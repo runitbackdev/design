@@ -1,4 +1,4 @@
-import { Button, Collapsible } from "@runitback/react";
+import { Button, Collapsible } from "@runitbk/react";
 
 export default function () {
   return (

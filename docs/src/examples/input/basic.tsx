@@ -1,4 +1,4 @@
-import { Input } from "@runitback/react";
+import { Input } from "@runitbk/react";
 
 export default function () {
   return (

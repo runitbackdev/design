@@ -1,4 +1,4 @@
-import { Button, Tooltip } from "@runitback/react";
+import { Button, Tooltip } from "@runitbk/react";
 
 export default function () {
   return (

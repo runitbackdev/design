@@ -1,4 +1,4 @@
-import { Meter } from "@runitback/react";
+import { Meter } from "@runitbk/react";
 
 export default function () {
   return (

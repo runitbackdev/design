@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
-import { Button, cn, ScrollArea, Separator, Wordmark } from "@runitback/react";
+import { Button, cn, ScrollArea, Separator, Wordmark } from "@runitbk/react";
 import { groups, itemBySlug } from "./meta";
 import { CommandPalette } from "./components/CommandPalette";
 import { ComponentPage } from "./components/ComponentPage";

@@ -1,4 +1,4 @@
-import { Button } from "@runitback/react";
+import { Button } from "@runitbk/react";
 
 export default function () {
   return (

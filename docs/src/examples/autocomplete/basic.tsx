@@ -1,4 +1,4 @@
-import { Autocomplete } from "@runitback/react";
+import { Autocomplete } from "@runitbk/react";
 
 export default function () {
   return (

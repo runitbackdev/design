@@ -1,4 +1,4 @@
-import { Slider } from "@runitback/react";
+import { Slider } from "@runitbk/react";
 
 export default function () {
   return (

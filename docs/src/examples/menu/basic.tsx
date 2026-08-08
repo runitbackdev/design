@@ -1,4 +1,4 @@
-import { Button, Menu } from "@runitback/react";
+import { Button, Menu } from "@runitbk/react";
 
 export default function () {
   return (

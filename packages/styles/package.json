@@ -1,6 +1,17 @@
 {
-  "name": "@runitback/styles",
-  "version": "0.0.0",
+  "name": "@runitbk/styles",
+  "version": "0.1.0",
+  "description": "Design tokens, theme, and base CSS for the RunItBack design system.",
+  "license": "MIT",
+  "homepage": "https://runitbackdev.github.io/design/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runitbackdev/design.git",
+    "directory": "packages/styles"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": { "style": "./styles.css", "default": "./styles.css" },
     "./theme.css": "./theme.css",

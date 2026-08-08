@@ -1,4 +1,4 @@
-import { Separator } from "@runitback/react";
+import { Separator } from "@runitbk/react";
 
 export default function () {
   return (

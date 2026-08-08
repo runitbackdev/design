@@ -1,5 +1,5 @@
-// Generated from @runitback/styles/tokens.css — do not edit.
-// Regenerate: pnpm --filter @runitback/native generate:themes
+// Generated from @runitbk/styles/tokens.css — do not edit.
+// Regenerate: pnpm --filter @runitbk/native generate:themes
 export const darkVars = {
   accent: "#FFFFFF",
   "link-hover": "#C0CDFF",

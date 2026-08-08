@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Command, Search } from "lucide-react";
 import { useHotkey } from "@tanstack/react-hotkeys";
-import { Autocomplete, Dialog, Kbd } from "@runitback/react";
+import { Autocomplete, Dialog, Kbd } from "@runitbk/react";
 import { type PaletteItem, paletteItems } from "../meta";
 
 export function CommandPalette() {

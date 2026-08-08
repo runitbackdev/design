@@ -1,4 +1,4 @@
-import { OTPField } from "@runitback/react";
+import { OTPField } from "@runitbk/react";
 
 export default function () {
   return (

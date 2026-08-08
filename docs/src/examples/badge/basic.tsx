@@ -1,4 +1,4 @@
-import { Badge } from "@runitback/react";
+import { Badge } from "@runitbk/react";
 
 export default function () {
   return (

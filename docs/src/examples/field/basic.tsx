@@ -1,4 +1,4 @@
-import { Field, Input } from "@runitback/react";
+import { Field, Input } from "@runitbk/react";
 
 export default function () {
   return (

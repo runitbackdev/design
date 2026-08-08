@@ -1,4 +1,4 @@
-import { AlertDialog, Button } from "@runitback/react";
+import { AlertDialog, Button } from "@runitbk/react";
 
 export default function () {
   return (

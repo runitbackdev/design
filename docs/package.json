@@ -1,5 +1,5 @@
 {
-  "name": "@runitback/docs",
+  "name": "@runitbk/docs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,8 +9,8 @@
   },
   "dependencies": {
     "@tanstack/react-hotkeys": "^0.10.0",
-    "@runitback/react": "workspace:*",
-    "@runitback/styles": "workspace:*",
+    "@runitbk/react": "workspace:*",
+    "@runitbk/styles": "workspace:*",
     "lucide-react": "^1.21.0",
     "react": "^19",
     "react-dom": "^19"

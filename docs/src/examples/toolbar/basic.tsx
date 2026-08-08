@@ -1,4 +1,4 @@
-import { Toolbar } from "@runitback/react";
+import { Toolbar } from "@runitbk/react";
 
 export default function () {
   return (

@@ -6,34 +6,34 @@ The design system for Run It Back.
 
 ## Packages
 
-A pnpm workspace. Each package stands alone and depends on `@runitback/styles`.
+A pnpm workspace. Each package stands alone and depends on `@runitbk/styles`.
 Versions that must stay identical across packages (`typescript`, `react-native`,
 `react-native-svg`, `@types/react`) live in the `catalog:` block of
 `pnpm-workspace.yaml` — packages reference `catalog:` instead of repeating the
 number, so they can't drift.
 
-- `@runitback/styles` — the source of truth. Hand-authored CSS: the design tokens as
+- `@runitbk/styles` — the source of truth. Hand-authored CSS: the design tokens as
   custom properties, the Tailwind v4 `@theme` layer, and the web base styles. One
   import. NativeWind reads its `theme.css` directly; native apps also import its
   `native.css` (per-weight fonts, durations, mount keyframes).
-- `@runitback/react` — the React components.
-- `@runitback/native` — the React Native components (see its README for app wiring).
+- `@runitbk/react` — the React components.
+- `@runitbk/native` — the React Native components (see its README for app wiring).
 
 ## Using it
 
 The web app brings Tailwind v4 and imports the styles:
 
     @import "tailwindcss";
-    @import "@runitback/styles";
+    @import "@runitbk/styles";
 
 That pulls the token variables, the `@theme` layer (so `bg-bg`, `text-ink`,
 `shadow-1`, `bg-scrim` resolve and flip under `[data-theme="dark"]`), the IBM Plex
-fonts, and the base layer. For finer control, `@runitback/styles/theme.css` is the
-tokens-only slice and `@runitback/styles/fonts.css` is the fonts alone.
+fonts, and the base layer. For finer control, `@runitbk/styles/theme.css` is the
+tokens-only slice and `@runitbk/styles/fonts.css` is the fonts alone.
 
 ## Building it
 
-mise handles node and pnpm — run `mise install` once. `@runitback/styles` is plain CSS,
+mise handles node and pnpm — run `mise install` once. `@runitbk/styles` is plain CSS,
 no build step. TS packages (icons, react) typecheck with tsgo and emit with tsc.
 The docs site runs on Vite; the playground is the Expo app below.
 
@@ -62,7 +62,7 @@ The docs site runs on Vite; the playground is the Expo app below.
   `vendor/`. The rem base itself is declared in `playground/global.css`
   (`:root { font-size: 16px }`).
 - `packages/native/src/themes.ts` (the dark-theme variables) is **generated** from
-  `tokens.css`: `pnpm --filter @runitback/native generate:themes`. Rerun after any
+  `tokens.css`: `pnpm --filter @runitbk/native generate:themes`. Rerun after any
   dark-block token change; never edit it by hand.
 
 Run it with `npx expo start` from `playground/` and open in Expo Go. After any CSS

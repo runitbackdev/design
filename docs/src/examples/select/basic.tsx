@@ -1,4 +1,4 @@
-import { Select } from "@runitback/react";
+import { Select } from "@runitbk/react";
 
 export default function () {
   return (

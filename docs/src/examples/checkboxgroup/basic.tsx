@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxGroup } from "@runitback/react";
+import { Checkbox, CheckboxGroup } from "@runitbk/react";
 
 export default function () {
   return (

@@ -1,4 +1,4 @@
-import { Toggle, ToggleGroup } from "@runitback/react";
+import { Toggle, ToggleGroup } from "@runitbk/react";
 
 export default function () {
   return (

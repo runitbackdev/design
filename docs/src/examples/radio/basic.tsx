@@ -1,4 +1,4 @@
-import { Radio, RadioGroup } from "@runitback/react";
+import { Radio, RadioGroup } from "@runitbk/react";
 
 export default function () {
   return (

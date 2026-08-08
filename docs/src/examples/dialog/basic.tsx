@@ -1,4 +1,4 @@
-import { Button, Dialog } from "@runitback/react";
+import { Button, Dialog } from "@runitbk/react";
 
 export default function () {
   return (

@@ -1,6 +1,17 @@
 {
-  "name": "@runitback/react",
-  "version": "0.0.0",
+  "name": "@runitbk/react",
+  "version": "0.1.0",
+  "description": "React components for the RunItBack design system, built on Base UI.",
+  "license": "MIT",
+  "homepage": "https://runitbackdev.github.io/design/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/runitbackdev/design.git",
+    "directory": "packages/react"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "exports": {
     ".": {
@@ -18,7 +29,7 @@
     "build": "tsc"
   },
   "peerDependencies": {
-    "@runitback/styles": "workspace:*",
+    "@runitbk/styles": "workspace:^",
     "react": "^19",
     "react-dom": "^19"
   },

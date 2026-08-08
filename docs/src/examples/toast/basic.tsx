@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Button, Toast } from "@runitback/react";
+import { Button, Toast } from "@runitbk/react";
 
 function Trigger() {
   const manager = Toast.useToastManager();
